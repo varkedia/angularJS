@@ -1,5 +1,7 @@
 <html>
 <head>
+  <script src="angular.min.js"></script>
+  <script src="app.js" charset="utf-8"></script>
   <style>
     body{
       background:powderblue;
@@ -9,9 +11,14 @@
   Welcome
 </title>
 </head>
-<body>
-  <h1>Hello friends</h1>
-  <h3>My name is Vartika and I m here to help you</h3>
-  I love you baby
+<body ng-app="NameCalculator">
+  <h1>name calculator</h1>
+  <div ng-controller="NameCalculatorController">
+    <div>
+      Your name:
+      <input type="text" ng-model="name" ng-keyup="displayNumric();">
+    </div>
+    <div>Total numeric value of persons name is: {{totalValue}} </div>
+  </div>
 </body>
 </html>
